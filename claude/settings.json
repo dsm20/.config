@@ -45,7 +45,7 @@
       "Bash(npm --version:*)"
     ]
   },
-  "model": "claude-opus-4-6[1m]",
+  "model": "claude-sonnet-4-6[1m]",
   "hooks": {
     "PermissionRequest": [
       {
@@ -70,7 +70,19 @@
     "skill-creator@claude-plugins-official": true,
     "code-simplifier@claude-plugins-official": true,
     "context7@claude-plugins-official": false,
-    "security-guidance@claude-plugins-official": true
+    "security-guidance@claude-plugins-official": true,
+    "ralph-loop@claude-plugins-official": true,
+    "multi-review@dsm20-plugins": true
   },
-  "effortLevel": "high"
+  "extraKnownMarketplaces": {
+    "dsm20-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "dsm20/dsm20-plugins"
+      }
+    }
+  },
+  "effortLevel": "high",
+  "advisorModel": "opus",
+  "tui": "default"
 }
