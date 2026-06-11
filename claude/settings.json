@@ -56,6 +56,46 @@
             "type": "command",
             "command": "afplay /System/Library/Sounds/Glass.aiff",
             "async": true
+          },
+          {
+            "type": "command",
+            "command": "tmux set-window-option -t \"$TMUX_PANE\" @claude-perm 1 2>/dev/null; (sleep 120 && tmux set-window-option -t \"$TMUX_PANE\" @claude-perm 0 2>/dev/null) &",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "tmux set-window-option -t \"$TMUX_PANE\" @claude-perm 0 2>/dev/null",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "tmux set-window-option -t \"$TMUX_PANE\" @claude-perm 0 2>/dev/null",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "tmux set-window-option -t \"$TMUX_PANE\" @claude-perm 0 2>/dev/null",
+            "async": true
           }
         ]
       }
