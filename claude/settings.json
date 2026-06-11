@@ -42,7 +42,9 @@
       "Bash(date:*)",
       "Bash(npm list:*)",
       "Bash(node --version:*)",
-      "Bash(npm --version:*)"
+      "Bash(npm --version:*)",
+      "mcp__plugin_slack_slack__slack_search_public",
+      "mcp__plugin_slack_slack__slack_read_channel"
     ]
   },
   "model": "claude-sonnet-4-6[1m]",
@@ -72,13 +74,22 @@
     "context7@claude-plugins-official": false,
     "security-guidance@claude-plugins-official": true,
     "ralph-loop@claude-plugins-official": true,
-    "multi-review@dsm20-plugins": true
+    "multi-review@dsm20-plugins": true,
+    "frontend-design@claude-plugins-official": true,
+    "obsidian@obsidian-skills": true,
+    "slack@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "dsm20-plugins": {
       "source": {
         "source": "github",
         "repo": "dsm20/dsm20-plugins"
+      }
+    },
+    "obsidian-skills": {
+      "source": {
+        "source": "github",
+        "repo": "kepano/obsidian-skills"
       }
     }
   },
